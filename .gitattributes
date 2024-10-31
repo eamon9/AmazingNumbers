@@ -1,0 +1,14 @@
+# Ignorēt noteiktus direktorijus valodu statistikā
+vendor/* linguist-vendored
+node_modules/* linguist-vendored
+
+# Definēt failu paplašinājumus, kas jāuzskata par citu valodu
+*.r linguist-language=JavaScript
+*.txt linguist-language=HTML
+
+# Izslēgt failus, kas tiek automātiski ģenerēti, no valodu statistikas
+public/build/* linguist-generated
+docs/api/* linguist-generated
+
+# Piespiest valodu statistikai izmantot konkrētu valodu failiem bez paplašinājuma
+README linguist-language=Markdown
