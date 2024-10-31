@@ -1,10 +1,1 @@
-# Definēt failu paplašinājumus, kas jāuzskata par citu valodu
-*.r linguist-detectable=false
-*.txt linguist-language=HTML
-
-# Izslēgt failus, kas tiek automātiski ģenerēti, no valodu statistikas
-public/build/* linguist-generated
-docs/api/* linguist-generated
-
-# Piespiest valodu statistikai izmantot konkrētu valodu failiem bez paplašinājuma
-README linguist-language=Markdown
+.github/workflows/* linguist-vendored
