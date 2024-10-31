@@ -1,0 +1,34 @@
+
+1. Handle Exceeding MAX_VALUE
+* Implement logic to manage cases where a number exceeds the MAX_VALUE limit.
+
+2. Review Function Inputs
+* Identify which arguments need to be passed to functions and what existing 
+utilities in util.js can be reused.
+
+3. Optimize Repetitive HTML Code
+* Consider generating repetitive HTML structures dynamically in JavaScript to reduce redundancy.
+
+4. Organize Utility Functions
+* Decide whether to create a new util.js for organizing functions related to number properties, 
+error handling, etc.
+
+5. Enhance First Page Content
+* Add a brief explanation of all the "magic" number types on the right side of the page
+ to provide context for users.
+
+6. Error mesage appearing
+* In some cases error message is not seen (need to scrool to it...)
+
+7. After 1 or two argument space after error
+* If i enter 1 number and space it shows wrong answer..
+
+8. 4 param input fail with dispaly text correct
+* On 4 param where inputDisplay , second number is failing it shows wrong number of consecutives
+
+9. Error on wrong input
+* "The request contains mutually exclusive properties: []" will show if i put for ex. 9 2 EV
+
+10. 
+* 
+

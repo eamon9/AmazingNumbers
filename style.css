@@ -1,0 +1,392 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "comic Sans MS";
+  min-height: 100vh;
+  color: white;
+  background: linear-gradient(
+    to bottom right,
+    hsl(0, 0%, 0%) 30%,
+    hsl(232, 72%, 51%)
+  );
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}
+
+.title {
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: rgb(34, 148, 119);
+  width: 100%;
+  height: 5rem;
+}
+
+.title .replacement {
+  display: none;
+}
+
+.title-2nd-part {
+  color: rgb(47, 145, 1);
+  margin-bottom: 1rem;
+}
+
+.about-title {
+  font-size: 2em;
+  margin: 3rem 3rem 0 3rem;
+}
+
+.about-paragraph {
+  max-width: 50rem;
+  font-size: 1.4em;
+  font-weight: 400;
+  margin-left: 5rem;
+  line-height: 2.5rem;
+}
+
+.burger-menu {
+  font-size: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 2;
+
+  font-weight: bold;
+  background: linear-gradient(90deg, white, blue);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 1s ease;
+  background-size: 200% 100%;
+}
+
+.burger-menu:hover {
+  background-size: 300%;
+  background-position: 100% 0;
+}
+
+.side-menu {
+  height: 100%;
+  width: 400px;
+  position: fixed;
+  top: 0;
+  left: -400px;
+  background-color: hsla(0, 0%, 0%, 0.899);
+  overflow-x: hidden;
+  transition: transform 0.5s ease;
+  padding-top: 5rem;
+  z-index: 1;
+}
+
+.side-menu ul {
+  margin-top: 4rem;
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-menu ul li {
+  padding: 8px 16px;
+  text-align: left;
+}
+
+.side-menu ul li a {
+  color: hsl(232, 72%, 51%);
+  font-size: 2rem;
+  display: block;
+}
+
+.side-menu ul li a:hover {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  margin-left: 2rem;
+  transition: margin-left 1s ease;
+}
+
+.side-menu.open {
+  transform: translateX(400px);
+}
+
+.side-menu ul li .current-page {
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.input-container #taskInfo {
+  text-align: center;
+  font-size: 4em;
+  margin: 1.5rem 0 0 0;
+  border-radius: 50px;
+  background: linear-gradient(to top, hsl(0, 0%, 0%) 30%, hsl(232, 72%, 51%));
+  border: 5px solid white;
+  width: 6rem;
+  height: 6rem;
+  transition: background-color 1.5s ease-in, color 1.5s ease-in,
+    border-radius 1.5s ease-in, width 1s ease-in;
+}
+
+.input-container #taskInfo.cirkle-sides {
+  text-align: center;
+  font-size: 4em;
+  margin: 1.5rem 0 1.5rem 0;
+  color: white;
+  border-radius: 50px;
+  width: 16rem;
+  height: 6rem;
+  transition: background-color 1.5s ease-in-out, color 1.5s ease-in-out,
+    border-radius 1.5s ease-in-out, width 1.5s ease-in-out;
+}
+
+#taskInfo {
+  display: inline-block;
+  transition: transform 1.5s ease, opacity 1.5s ease;
+}
+
+#taskInfo.hidden {
+  opacity: 0.5;
+  transform: translateY(-5px);
+}
+
+#taskInfo.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.input-container .description {
+  margin: 0 0 1rem 0;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1s ease-out, opacity 1s ease-out;
+  text-align: center;
+  font-size: 2em;
+}
+
+.input-container .description.active {
+  max-height: 50rem;
+  opacity: 1;
+  transition: max-height 1s ease-in, opacity 1s ease-in;
+  text-align: center;
+  font-size: 2em;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"]:focus {
+  outline: none;
+}
+
+.input-container #user-input {
+  width: 100%;
+  height: 8rem;
+  font-size: 4rem;
+  text-align: center;
+  color: hsl(261, 90%, 34%);
+  background-color: hsl(0, 0%, 0%);
+  border-top: 4px solid hsl(261, 90%, 34%);
+  border-bottom: 4px solid hsl(261, 90%, 34%);
+}
+
+#checkBtn {
+  margin: 2rem;
+  width: 50%;
+  height: 6rem;
+  border-radius: 1rem;
+  border: 5px solid black;
+  font-size: 3em;
+  font-weight: bold;
+  transition: background-color 1s ease-out;
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 0%) 10%,
+    hsl(232, 72%, 51%) 80%,
+    hsl(0, 0%, 0%)
+  );
+}
+
+#checkBtn:active {
+  background-color: hsl(0, 0%, 20%);
+  color: white;
+  transition: none;
+  border-color: white;
+}
+
+.result-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#input-display-container,
+#review-display-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#input-display-container {
+  height: 8rem;
+  border-bottom: 0.5rem dashed hsl(232, 72%, 51%);
+}
+
+#review-display-container {
+  height: 30rem;
+  align-items: baseline;
+  overflow: scroll;
+}
+
+#input-display {
+  font-size: 2em;
+}
+
+#review-display {
+  font-size: 2em;
+}
+
+.alert-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsla(0, 0%, 0%, 0.7); /* Transparent black */
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-alert {
+  background-color: #fff;
+  color: #333;
+  border-radius: 10px;
+  width: 40rem;
+  overflow-y: auto;
+  word-wrap: break-word;
+  min-height: 5rem;
+  font-size: 1.2em;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.custom-alert p {
+  margin: 2rem;
+}
+
+.btn-container {
+  display: flex;
+  align-items: end;
+  justify-content: right;
+  border-top: 2px solid silver;
+  margin-top: 1rem;
+}
+
+.alert-button {
+  margin: 10px 20px;
+  padding: 0;
+  width: 3.4rem;
+  height: 1.8rem;
+  background-color: #fff;
+  color: hsl(220, 97%, 60%);
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert-button:active {
+  color: hsl(220, 97%, 40%);
+}
+
+.show {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 7rem;
+    font-size: 0.7em;
+  }
+
+  .burger-menu {
+    font-size: 4rem;
+  }
+
+  .side-menu {
+    width: 300px;
+    left: -300px;
+  }
+
+  .side-menu.open {
+    transform: translateX(300px);
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    margin: 2rem 1rem 0 1rem;
+  }
+
+  .about-paragraph {
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    max-width: 100%;
+    line-height: 2rem;
+  }
+
+  #taskInfo {
+    font-size: 3rem;
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .input-container #taskInfo {
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .input-container #taskInfo.cirkle-sides {
+    width: 12rem;
+    height: 4rem;
+    font-size: 3rem;
+  }
+
+  .input-container #user-input {
+    width: 80%;
+    height: 4rem;
+    font-size: 3.5rem;
+  }
+
+  #checkBtn {
+    width: 50%;
+    height: 5rem;
+    font-size: 2rem;
+    color: black;
+  }
+}

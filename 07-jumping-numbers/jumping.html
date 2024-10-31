@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <title>AMAZING NUMBERS</title>
+</head>
+
+<body>
+  <header>
+    <div class="burger-menu" id="burgerMenu">&#9776;</div>
+    <h1 class="title"><a href="/index.html">AMAZING NUMBERS</a>
+      <span class="title-2nd-part">Jumping Numbers</span>
+    </h1>
+  </header>
+
+  <nav id="sideMenu" class="side-menu">
+    <ul>
+      <li> <a href="/index.html">✦ HOME</a></li>
+      <li> <a href="/01-buzz-numbers/buzz.html">✦ Buzz</a></li>
+      <li> <a href="/02-duck-numbers/duck.html">✦Duck</a></li>
+      <li> <a href="/03-palindromic-numbers/palindromic.html">✦ Palindromic</a></li>
+      <li> <a href="/04-gapful-numbers/gapful.html">✦ Gapful</a></li>
+      <li> <a href="/05-spy-numbers/spy.html">✦ Spy</a></li>
+      <li> <a href="/06-sunny-square-numbers/sunny-square.html">✦ Sunny & Square</a></li>
+      <li> <a class="current-page" href="/07-jumping-numbers/jumping.html">☞ Jumping</a></li>
+    </ul>
+  </nav>
+
+  <div class="input-container">
+    <p class="toogle-text task-info visible" id="taskInfo">i.</p>
+    <p class="description">
+      A number is a Jumping number if the adjacent digits inside the number differ by 1. The difference between 9 and 0 is not
+      considered as 1. Single-digit numbers are considered Jumping numbers. For example, 78987, and 4343456 are Jumping
+      numbers, but 796 and 89098 are not.<br>
+      * the first parameter represents a starting number<br>
+      * the second parameter shows how many consecutive numbers are to be processed<br>
+      * every next property you enter will be executed ex. [10 2 EVEN BUZZ] or [2 8 SPY PALINDROMIC SUNNY]<br>
+    </p>
+    <input id="user-input" placeholder="Enter number or two numbers**" min="1" max="1000000" step="100">
+    <button id="checkBtn">Check</button>
+  </div>
+
+  <div class="result-container">
+    <div id="input-display-container">
+      <p id="input-display">YOUR INPUT GOES HERE</p>
+
+    </div>
+    <div id="review-display-container">
+      <p id="review-display">number review text</p>
+    </div>
+  </div>
+
+  <script type="module" src="/07-jumping-numbers/jumping.js"></script>
+</body>
+
+</html>
